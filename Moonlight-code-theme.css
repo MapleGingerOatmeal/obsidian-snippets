@@ -1,0 +1,25 @@
+/* === Moonlight theme for code blocks === */
+
+.theme-dark {    
+    --code-background: #222436;
+    --code-normal: #c8d3f5;
+    --code-normal-rgb: 200, 211, 245; 
+    --code-comment: #7e8eda;
+    --code-comment-rgb: 126, 142, 218;
+    --code-function: var(--color-lime);             /* #99EC8C */ 
+    --code-important: var(--color-yellow);          /* #FFD374 */ 
+    --code-keyword: var(--color-purple);            /* #AA9BFF */ 
+    --code-operator: var(--color-pink);             /* #FAB6FF */ 
+    --code-property: var(--color-green);            /* #4FD6BE */ 
+    --code-punctuation: var(--text-muted);          /* #a9b8e8 */
+    --code-string: var(--color-blue-light);         /* #89caff */ 
+    --code-tag: var(--color-cyan);                  /* #76F6FF */ 
+    --code-value: var(--color-yellow);              /* #FFD374 */
+
+    /* --- Brighten background for inline code only --- */
+    /* Editing mode and reading mode */
+    .cm-s-obsidian span.cm-inline-code,
+    .markdown-rendered :not(pre) > code {
+        background-color: var(--color-base-50);     /* #2f334d */
+    }
+}

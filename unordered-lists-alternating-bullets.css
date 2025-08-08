@@ -1,0 +1,76 @@
+/*=== OBSIDIAN UNORDERED LISTS - ALTERNATING BULLET POINTS ===*/
+
+/**
+    Make each level in an unordered list have a different bullet symbol (only works in Live Preview)
+    Source: https://forum.obsidian.md/t/style-bullets-in-lists-by-level/46152/2
+    
+    Source for Reading View addition: https://forum.obsidian.md/t/problems-encountered-when-modifying-unordered-lists-styles-with-css/53824/3
+ */
+
+/* Increase space after the bullet */
+.markdown-reading-view ul li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .cm-formatting-list-ul .list-bullet {
+  margin-right: 0.33em;
+}
+
+/* Bullet • */
+.markdown-reading-view ul > li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-1 .list-bullet:after {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+
+/* Dash - */
+.markdown-reading-view ul > li > ul > li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-2 .list-bullet:after {
+  height: 1px;
+  width: 7px;
+  border-radius: 0%;
+}
+
+/* Solid Square ▪ */
+.markdown-reading-view ul > li > ul > li > ul > li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-3 .list-bullet:after {
+  height: 5px;
+  width: 5px;
+  border-radius: 0%;
+} 
+
+/* Hollow Bullet ◦ */
+.markdown-reading-view ul > li > ul > li > ul > li > ul > li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-4 .list-bullet:after {
+  height: 4px;
+  width: 4px;
+  background-color: Transparent;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 1px;
+} 
+
+/* Dash - */
+.markdown-reading-view ul > li > ul > li > ul > li > ul > li > ul > li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-5 .list-bullet:after {
+  height: 1px;
+  width: 7px;
+  border-radius: 0%;
+} 
+
+/* Hollow Square ▫ */
+.markdown-reading-view ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-6 .list-bullet:after {
+  height: 4px;
+  width: 4px;
+  background-color: Transparent;
+  border-style: solid;
+  border-radius: 0%;
+  border-width: 1px;
+} 
+
+/* Small Bullet ∙ */
+.markdown-reading-view ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-7 .list-bullet:after {
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+} 

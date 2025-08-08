@@ -1,0 +1,118 @@
+.theme-dark {
+
+    /* --- MAIN THEME COLORS --- */
+    --background-primary: #1e202f;
+    --background-primary-rgb: 30, 32, 46;
+    --background-primary-alt: #222436;
+    --background-primary-alt-rgb: 34, 36, 54;
+    --background-secondary: #222436;
+    --background-secondary-rgb: 34, 36, 54;
+    --background-secondary-alt: #2f334c;
+    --background-secondary-alt-rgb: 47, 51, 76;
+    --color-base-00: #131421;
+    --color-base-05: #16182a;
+    --color-base-10: #191b28;
+    --color-base-20: #1b1d2c;
+    --color-base-25: #1c1e2f;
+    --color-base-30: #1e2030;
+    --color-base-35: #212337;
+    --color-base-40: #222436;
+    --color-base-50: #2f334d;
+    --color-base-60: #383e5c;
+    --color-base-70: #444a73;
+    --color-base-100: #b4c2f0;
+    --color-base-100-rgb: 180, 194, 240;
+    /* --color-accent: #82aaff */
+    --color-accent-rgb: 130, 170, 255;
+    --color-accent-hsl: 221, 100%, 75%;
+    --color-red: #FF7472;
+    --color-red-rgb: 255, 116, 114;
+    --color-orange: #ff9666;
+    --color-orange-rgb: 255, 150, 102;
+    --color-brown: #CC9B86;
+    --color-brown-rgb: 204, 155, 134;
+    --color-yellow: #FFD374;
+    --color-yellow-rgb: 255, 211, 116;
+    --color-lime: #99EC8C;
+    --color-lime-rgb: 153, 236, 140;
+    --color-green: #4FD6BE;
+    --color-green-rgb: 79, 214, 190;
+    --color-cyan: #76F6FF;
+    --color-cyan-rgb: 118, 246, 255;
+    --color-blue: #82AAFF;
+    --color-blue-rgb: 130, 170, 255;
+    --color-blue-light: #89caff;
+    --color-blue-light-rgb: 137, 202, 255;
+    --color-purple: #AA9BFF;
+    --color-purple-rgb: 170, 155, 255;
+    --color-pink: #FAB6FF;
+    --color-pink-rgb: 250, 182, 255;
+
+    /* --- EDITOR ADJUSTMENTS --- */
+
+    /* Headings */
+    --h1-color: var(--color-blue);
+    --h2-color: var(--color-blue);
+    --h3-color: var(--color-purple);
+    --h4-color: var(--color-green);
+    --h5-color: var(--color-lime);
+    --h6-color: var(--color-yellow);
+
+    /* Text */
+    --bold-color: var(--text-accent);
+    --indentation-guide-color: var(--color-base-60);
+    --link-color: var(--color-green);
+    --link-color-hover: #5DFCDF;
+    --link-color-hover-rgb: 93, 252, 223;
+    --link-external-color-hover: #92B5FF;
+    --link-external-color-hover-rgb: 146, 181, 255;
+    --text-highlight-bg-rgb: var(--color-green-rgb);    /* rgb(79, 214, 190) */
+    --text-normal: #d5def8;
+    --text-normal-rgb: 213, 222, 248;
+    --text-muted: #a9b8e8;
+    --text-muted-rgb: 169, 184, 232;
+    --text-muted-hsl: 226, 58%, 79%;
+    --text-dark: #7e8eda;
+    --text-dark-rgb: 126, 142, 218; 
+    --text-faint: #828bb8;
+    --text-faint-rgb: 130, 139, 184;
+    --text-accent: #82aaff;
+    --text-accent-rgb: 130, 170, 255;
+
+    /* Background modifiers */ 
+    --background-modifier-hover: #2E344E;
+    --background-modifier-hover-rgb: 46, 52, 78;
+    --background-modifier-active-hover: #444a71;
+    --background-modifier-border: #2f334c;
+    --background-modifier-border-rgb: 47, 51, 76;
+    --background-modifier-border-hover: #3f445d;
+    --background-modifier-error: #FF7472;
+    --background-modifier-error-rgb: 206, 108, 124;
+    --background-modifier-error-hover: #fd807e;
+    --background-modifier-success: #99EC8C;
+    --background-modifier-success-rgb: 122, 248, 202;
+    --background-modifier-success-hover: #aafd9d;
+
+    /* --- UI ELEMENTS --- */
+    --icon-color-focused: var(--color-accent);                          /* #82aaff                    */
+    --nav-item-background-active: rgba(var(--color-blue-rgb), 0.125);   /* rgba(130, 170, 255, 0.125) */
+    --nav-item-background-hover: rgba(var(--color-blue-rgb), 0.25);     /* rgba(130, 170, 255, 0.25)  */
+    --nav-item-color: #b4c2f0;
+    --nav-item-color-rgb: 180, 194, 240;
+    --scrollbar-active-thumb-bg: rgba(var(--color-blue-rgb), 0.2);      /* rgba(130, 170, 255, 0.2)   */
+    --scrollbar-bg: rgba(var(--color-blue-rgb), 0.05);                  /* rgba(130, 170, 255, 0.05)  */
+    --scrollbar-thumb-bg: rgba(var(--color-blue-rgb), 0.1);             /* rgba(130, 170, 255, 0.1)   */
+    --tag-background: hsla(var(--interactive-accent-hsl), 0.2);         /* rgba(130, 170, 255, 0.2)   */ 
+    --tag-background-hover: hsla(var(--interactive-accent-hsl), 0.3);   /* rgba(130, 170, 255, 0.3)   */
+    --tooltip: hsla(232, 25%, 35%, 1);
+    --vault-profile-color: var(--text-dark);
+
+    /* Apply color to bold text in source mode */
+    span.cm-strong.cm-strong { color: var(--bold-color); }
+    
+    /* Normalize colors for active tab icons and titles */
+    .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+    .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+        color: var(--text-muted);
+    }
+}
