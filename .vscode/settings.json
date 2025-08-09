@@ -1,0 +1,6 @@
+{
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.defaultFormatter": "vscode.css-language-features",
+    "editor.experimentalWhitespaceRendering": "font",
+    "chat.agent.enabled": false
+}
