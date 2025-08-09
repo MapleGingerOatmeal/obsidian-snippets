@@ -35,7 +35,7 @@
     .edit-block-button {
         background-color: transparent;
         mix-blend-mode: normal;
-        isolation: auto; /* ensures no new stacking context is created */
+        isolation: auto;
     }
     /* 'Edit block' button icon */
     .edit-block-button .svg-icon {
@@ -140,10 +140,11 @@
 
     /* === EXTENSIONS === */
 
-    /* Commander - 'add' button in status bar */
+    /* --- COMMANDER --- */
+    /* Reduce opacity of 'add' button icon in status bar */
     .cmdr-adder { opacity: 0.5; }
  
-    /* --- Calendar --- */
+    /* --- CALENDAR --- */
     #calendar-container { padding: 0; }
     #calendar-container .nav { padding: 0 2px; }
     #calendar-container .day, #calendar-container .week-num { padding: 1px; }
