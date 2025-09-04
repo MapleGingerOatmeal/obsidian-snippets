@@ -1,10 +1,10 @@
 /** =======================================
-    CODE STYLES
+      CODE STYLES
     ======================================= */
 
 /** 
-   Make code blocks render immediately after preceeding text, with minimal gap 
-   Source: https://forum.obsidian.md/t/distance-between-code-block-and-text-paragraph/82393/2  
+ * Make code blocks render immediately after preceeding text, with minimal gap 
+ * Source: https://forum.obsidian.md/t/distance-between-code-block-and-text-paragraph/82393/2  
  */
 
  .code-no-top-margin .markdown-rendered div:has(> h1) + div:has(pre),
@@ -18,7 +18,7 @@
  }
 
 /** =======================================
-    HEADING STYLES
+      HEADING STYLES
     ======================================= */
 
 /* White headings */
@@ -48,7 +48,7 @@
 }
 
 /** =======================================
-    IMAGE STYLES
+      IMAGE STYLES
     ======================================= */
 
 /* Simple image borders */
@@ -58,7 +58,7 @@
 }
 
 /** =======================================
-    TABLE STYLES
+      TABLE STYLES
     ======================================= */
 
 /* Borderless tables  */
@@ -122,9 +122,29 @@
     --table-line-height: 1.5;
 }
 
+/** =======================================
+      TEXT STYLES
+    ======================================= */
+
+/* --- Spoiler text --- */
+/* To use, wrap text using <span class="spoiler">Your text here</span> */
+
+/* Box to obscure spoiler text */
+span.spoiler {
+  background-color: var(--color-base-50); /* Also the value I use for inline code */
+  color: var(--color-base-50);            
+  padding: .1em .2em;
+  border-radius: 3px;
+  transition: color 0.2s ease;
+}
+
+span.spoiler:hover {
+  color: var(--text-normal); /* Revealed text color */
+  background-color: var(--background-primary);
+}
 
 /** =======================================
-    NOTE-SPECIFIC CLASSES
+      NOTE-SPECIFIC CLASSES
     ======================================= */
 
 /* === Color Highlighter demo (targets Live Preview) ===  */

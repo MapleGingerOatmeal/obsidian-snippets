@@ -3,160 +3,141 @@
 .theme-dark {
 
     /* --- VARIABLES --- */
-    --bold-modifier: 300;
-    --embed-border-start: none;
+    --bold-modifier:            300;
+    --embed-border-start:       none;
     --embed-block-shadow-hover: none;
-    --h1-size: 2.4em;
-    --h2-size: 2.2em;
-    --h3-size: 2em;
-    --h4-size: 1.8em;
-    --h5-size: 1.6em;
-    --h6-size: 1.4em;
-    --h1-weight: 800;
-    --h2-weight: 700;
-    --h3-weight: 660;
-    --h4-weight: 620;
-    --h5-weight: 600;
-    --h6-weight: 600;
-    --nav-item-size: var(--font-ui-smaller);
-    --nav-item-weight-active: 600;
+    --h1-size:                  2.4em;
+    --h2-size:                  2.2em;
+    --h3-size:                  2em;
+    --h4-size:                  1.8em;
+    --h5-size:                  1.6em;
+    --h6-size:                  1.4em;
+    --h1-weight:                800;
+    --h2-weight:                700;
+    --h3-weight:                660;
+    --h4-weight:                620;
+    --h5-weight:                600;
+    --h6-weight:                600;
+    --nav-item-size:            var(--font-ui-smaller);
+    --nav-item-weight-active:   600;
 
     /* --- EDITOR --- */
 
-    /* --- 'Edit block' buttons - make more subtle, especially on hover --- */
+    /* - 'Edit block' buttons - reduce prominence, especially on hover - */
 
     /* Override button background color (appears on hover of button only) */
-    @media (hover: hover) {
-        .markdown-source-view.mod-cm6 .cm-embed-block:not(.cm-table-widget, .cm-lang-base):hover .edit-block-button:hover {
-            background-color: rgba(var(--nav-item-color-rgb), 0.05);
-        }
-    }
+    @media(hover:hover) {
+        .markdown-source-view.mod-cm6 .cm-embed-block:not(
+            .cm-table-widget, .cm-lang-base):hover .edit-block-button:hover {
+                background-color: rgba(var(--nav-item-color-rgb), 0.05);}}
+
     /* Unset default behavior so mix-blend-mode will work */
     .edit-block-button {
-        background-color: transparent;
-        mix-blend-mode: normal;
-        isolation: auto;
-    }
+        background-color:               transparent;
+        mix-blend-mode:                 normal;
+        isolation:                      auto;}
     /* 'Edit block' button icon */
     .edit-block-button .svg-icon {
-        color: hsla(var(--text-muted-hsl), 0.6);
-        mix-blend-mode: exclusion;
-        isolation: isolate; /* ensures the icon blends correctly with the button background */
-        transition: opacity 0.2s ease;
-    }
+        color:                          hsla(var(--text-muted-hsl), 0.6);
+        mix-blend-mode:                 exclusion;
+        isolation:                      isolate; /* ensures the icon blends correctly with the button background */
+        transition:                     opacity 0.2s ease;}
     /* 'Edit block' button icon hovered */
-    .edit-block-button:hover .svg-icon {
-        color: hsla(var(--text-muted-hsl), 1);
-    }
+    .edit-block-button:hover .svg-icon {color: hsla(var(--text-muted-hsl), 1);}
     
     /* Embeds - remove title */
     .internal-embed .file-emebed-title,
-    .internal-embed .markdown-embed-title {
-        display: none;
-    }
+    .internal-embed .markdown-embed-title {display: none;}
     
     /* External links - remove icon */
     .external-link {
-        background-image: unset;
-        padding-right: unset;
-    }
+        background-image:   unset;
+        padding-right:      unset;}
 
     /* Images - center images by using '|center' in alt text, e.g. '[[attachments/image.png|center|500]]' */
     .markdown-preview-view img[alt*="center"],
     .markdown-source-view.mod-cm6 .cm-content img[alt*="center"] {
-        display: block;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
+        display:        block;
+        margin-left:    auto !important;
+        margin-right:   auto !important;}
 
     /* Tables - reduce space above */
-    .cm-embed-block.cm-table-widget > .table-wrapper { margin-top: -1em; }
+    .cm-embed-block.cm-table-widget > .table-wrapper {margin-top: -1em;}
     
     /* Tags - fix line height so text is not cut off on bottom */
-    .multi-select-pill { line-height: 1.25; }
+    .multi-select-pill {line-height: 1.25;}
     
     /* === UI ELEMENTS === */
 
     /* File explorer - folders (including bookmark folders) */
     .nav-folder-title-content,
-    .bookmark.mod-collapsible .tree-item-inner-text {
-        font-weight: 800;
-    }
+    .bookmark.mod-collapsible .tree-item-inner-text {font-weight: 800;}
 
     /* File explorer - Soft wrap file names instead of cutting off with ellipses */
     .nav-file-title-content,
-    .nav-folder-title-content {
-        white-space: normal;
-    }
+    .nav-folder-title-content {white-space: normal;}
 
-    /* Search results - make note titles stand out better */
+    /* Search results - note titles */
     .search-result-file-title,
-    div.tree-item-self.search-result-file-title.is-clickable:hover {
-        font-weight: 600;
-    }
+    div.tree-item-self.search-result-file-title.is-clickable:hover {font-weight: 600;}
 
     /* Settings headers */
     .vertical-tab-header-group-title {
-        color: var(--color-accent);
-        text-transform: uppercase;
-    }
+        color:          var(--color-accent);
+        text-transform: uppercase;}
 
     /* Settings → Plugins - community plugin titles */
     .community-modal-info-name {
-        color: var(--color-purple);
-        font-weight: var(--h3-weight);
-    }
-
-    /* Sidebar - Reduce top padding for some sections */
-    /* div.mod-right-split .workspace-tab-header-container:not(:first) {
-        padding: var(--size-4-2) var(--size-4-1);
-        height: 1px;
-    } */
+        color:          var(--color-purple);
+        font-weight:    var(--h3-weight);}
 
     /* Tabs > Pinned tabs - shrink tab size and hide title */
     .workspace-tab-header:has(.mod-pinned) {
         max-width: 60px !important;
-        & .workspace-tab-header-inner-title {
-            display: none;
-        }
+        & .workspace-tab-header-inner-title {display: none;}
     }
 
     /* Tooltips */
     .tooltip {
-        background-color: var(--tooltip); /* hsla(232, 25%, 35%, 1) */
-        color: var(--text-secondary);
-        word-wrap: break-word;
-    }
-    .tooltip .tooltip-arrow { border-bottom: 5px solid var(--tooltip); }
-    .tooltip.mod-right .tooltip-arrow { border-right: 5px solid var(--tooltip); }
-    .tooltip.mod-left .tooltip-arrow { border-left: 5px solid var(--tooltip); }
-    .tooltip.mod-top .tooltip-arrow { border-top: 5px solid var(--tooltip); }
+                                        background-color:   var(--tooltip); /* hsla(232, 25%, 35%, 1) */
+                                        color:              var(--text-secondary);
+                                        word-wrap:          break-word;}
+    .tooltip .tooltip-arrow {           border-bottom:      5px solid var(--tooltip);}
+    .tooltip.mod-right .tooltip-arrow { border-right:       5px solid var(--tooltip);}
+    .tooltip.mod-left .tooltip-arrow {  border-left:        5px solid var(--tooltip);}
+    .tooltip.mod-top .tooltip-arrow {   border-top:         5px solid var(--tooltip);}
 
     /* Mermaid diagrams - Prevent large diagrams from being cut off on the right */
-    .mermaid svg { 
-        max-width: 100%; 
-        height: auto;
-    }
+    .mermaid svg {max-width: 100%; 
+                  height:    auto;}
 
     /* === EXTENSIONS === */
 
     /* --- COMMANDER --- */
     /* Reduce opacity of 'add' button icon in status bar */
-    .cmdr-adder { opacity: 0.5; }
+    .cmdr.status-bar-item.cmdr-adder,
+    .cmdr.status-bar-item.clickable-icon[aria-label="Commander settings"] {opacity: 0.5;} 
  
     /* --- CALENDAR --- */
-    #calendar-container { padding: 0; }
-    #calendar-container .nav { padding: 0 2px; }
-    #calendar-container .day, #calendar-container .week-num { padding: 1px; }
-    #calendar-container .day.has-note.active.today {
-        background-color: var(--color-accent);
-        color: var(--text-on-accent);
-    }
-    #calendar-container .day.has-note.active > .dot-container > svg { stroke: var(--text-on-accent); }
-    #calendar-container .today { color: var(--color-accent); font-weight: bold; }
-    #calendar-container .title { font-size: 1.25em; }
-    #calendar-container .reset-button { align-self: center; }
+    #calendar-container {                                           padding:           0;}
+    #calendar-container .nav {                                      padding:           0 2px;}
+    #calendar-container .day, #calendar-container .week-num {       padding:           1px;}
+    #calendar-container .day.has-note.active.today {                background-color:  var(--color-accent);
+                                                                    color:             var(--text-on-accent);}
+    #calendar-container .day.has-note.active>.dot-container>svg {   stroke:            var(--text-on-accent);}
+    #calendar-container .today                                  {   color:             var(--color-accent);
+                                                                    font-weight:       bold;}
+    #calendar-container .title {                                    font-size:         1.25em;}
+    #calendar-container .reset-button {                             align-self:        center;}
     /* Hide scrollbar */
-    /* .workspace-split.mod-left-split .view-content, */
-    .workspace-split.mod-right-split .view-content:has(div#calendar-container) { overflow: auto; }
+    .workspace-split.mod-right-split .view-content:has(
+        div#calendar-container) {                                   overflow:          auto;}
+
+/*  .workspace-ribbon.is-collapsed:not(:hover) .workspace-ribbon-collapse-btn, 
+    .workspace-ribbon.is-collapsed:not(:hover) .side-dock-actions, 
+    .workspace-ribbon.is-collapsed:not(:hover) .side-dock-settings {display:        none;}
+    .workspace-ribbon.is-collapsed:not(:hover)                     {width:          0;}
+    .workspace-split.mod-left-split[style="width: 0px;"]           {margin-left:    0;}
+    .workspace-split.mod-right-split[style="width: 0px;"]          {margin-right:   0;}
+    .workspace-ribbon                                              {transition:     none;} */
 }
