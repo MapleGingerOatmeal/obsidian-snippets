@@ -66,6 +66,13 @@ body {
     line-height: 1.8;
 }
 
+/* Prompt for AI */
+
+.callout[data-callout="prompt"] {
+    --callout-color: var(--color-purple-rgb);
+    --callout-icon: lucide-sparkles;
+}
+
 /* Reminder */
 
 .callout[data-callout="reminder"] {
