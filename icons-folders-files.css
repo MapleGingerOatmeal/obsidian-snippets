@@ -35,7 +35,7 @@
  * File explorer - remove tree collapse icons
  * but not in search results
  */
-.tree-item-self .tree-item-icon.collapse-icon:not(> [class*="search-result"]) { display: none; }
+.tree-item-self .tree-item-icon.collapse-icon { display: none; }
 
 .nav-file-title { left: -16px; }
 
