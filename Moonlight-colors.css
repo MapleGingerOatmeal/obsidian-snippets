@@ -53,6 +53,9 @@
     --color-purple-rgb: 170, 155, 255;
     --color-pink: #FAB6FF;
     --color-pink-rgb: 250, 182, 255;
+    --obsidian-purple-theme-dark: #a882ff;
+    --obsidian-purple-theme-light: #7852ee;
+    --obsidian-purple: var(--obsidian-purple-theme-dark);
 
     /* --- EDITOR ADJUSTMENTS --- */
 
